@@ -1,0 +1,18 @@
+{
+    "name": "alex/doctrine",
+    "description": "estudos sobre doctrine",
+    "type": "package",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Alex Moreno",
+            "email": "alex.moreno.costa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "doctrine/common": "^2.7",
+        "doctrine/dbal": "^2.5",
+        "doctrine/orm": "^2.5"
+    }
+}
