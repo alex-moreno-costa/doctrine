@@ -34,14 +34,12 @@ class Subscription
     private $status;
 
     /**
-     * @ORM\Column(type="integer", nullable=false)
      * @ORM\Column(type="datetime", nullable=true)
      * @var \DateTime
      */
     protected $started;
 
     /**
-     * @ORM\Column(type="integer", nullable=false)
      * @ORM\Column(type="datetime", nullable=true)
      * @var \DateTime
      */
