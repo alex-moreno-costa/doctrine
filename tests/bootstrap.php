@@ -9,4 +9,10 @@ $dbParams = array(
     'dbname' => 'memory:dnp.db',
 );
 
-return $entityManager = EntityManager::create($dbParams, $config);
+$entityManager = EntityManager::create($dbParams, $config);
+
+$evm = $entityManager->getEventManager();
+$entitySubscriber = new \DoctrineNaPratica\Model\Subscriber\EntitySubscriber();
+$evm->addEventSubscriber($entitySubscriber);
+
+return $entityManager;

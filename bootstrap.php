@@ -26,3 +26,7 @@ $config->setMetadataDriverImpl($driver);
 AnnotationRegistry::registerFile(__DIR__ . '/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php');
 
 $entityManager = EntityManager::create($dbParams, $config);
+
+$evm = $entityManager->getEventManager();
+$entitySubscriber = new \DoctrineNaPratica\Model\Subscriber\EntitySubscriber();
+$evm->addEventSubscriber($entitySubscriber);
