@@ -75,6 +75,12 @@ class User
      */
     protected $profileCollection;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     * @var boolean
+     */
+    private $hasSpecialNeeds ;
+
     public function __construct()
     {
         $this->courseCollection = new ArrayCollection();
